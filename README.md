@@ -16,3 +16,5 @@
 `use strict`;
 ``` 
 which tell that we are not allowed to use any undefined variable.
+
+[go to site](index.html)
