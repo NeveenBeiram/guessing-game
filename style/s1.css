@@ -1,0 +1,37 @@
+img{
+    width: 100px;
+    display: block;
+    margin: auto;
+}
+
+body{
+    margin: auto;
+    padding: 20px;
+}
+
+main ul li:nth-child(odd){
+    background-color:blue;
+color:black;
+}
+
+main ul li:nth-child(even){
+    background-color:blanchedalmond;
+    color:crimson;
+}
+
+
+ul li{text-transform:uppercase;}
+
+p{
+    color: crimson;
+    line-height: 1.5;
+    text-align: center;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer{
+
+text-align: center;
+text-decoration-line: underline;
+
+}
