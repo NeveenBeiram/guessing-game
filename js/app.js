@@ -75,8 +75,9 @@ for (let i = 0 ; i<4;i++){
     alert('it is a correct answer');
     correctAnswer=correctAnswer +1;
     break;}
-  alert('the correct answer is 3');break;
+
 }
+alert('the correct answer is 3');
 
 
 
@@ -136,7 +137,6 @@ for (let i = 0 ; i<5;i++){
       favColor=prompt('what is my favorite colors ?');}
     else if(favColor === arr[y] ){ alert('it is one of my favorite color ');
       favColor=prompt('what is my next favorite color ?');
-      correctAnswer++;
 
     }
     break;
