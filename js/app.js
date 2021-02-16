@@ -75,7 +75,7 @@ for (let i = 0 ; i<4;i++){
     alert('it is a correct answer');
     correctAnswer=correctAnswer +1;
     break;}
-  alert('the correct answer is 3');
+  alert('the correct answer is 3');break;
 }
 
 
@@ -130,7 +130,7 @@ for (let i = 0 ; i<4;i++){
 let arr=['red','black','white'];
 
 favColor =prompt('what is my favorite colors ?').toLowerCase();
-for (let i = 0 ; i<=5;i++){
+for (let i = 0 ; i<5;i++){
   for(let y=0;y<arr.length;y++){
     if (favColor !==arr[y] ){alert('it is not one of my favorite color !');
       favColor=prompt('what is my favorite colors ?');}
