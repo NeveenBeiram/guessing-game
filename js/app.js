@@ -1,9 +1,10 @@
 'use strict';
+
 let correctAnswer = 0;
 let userName = prompt('What is your name?');
 alert('Welcome ' + userName + ' let start our guessing game');
 
-/*it's work just another way for the operator it is terrnary!
+/*it's work just another way for the operator it is terrnary!(it's for me)
 let likePet = prompt('Does i like pet?yes/no or y/n');
 likePet = likePet.toLowerCase();
 while(likePet.toLowerCase() !== 'yes' && likePet.toLowerCase() !== 'y' && likePet.toLowerCase() !=='no' && likePet.toLowerCase() !== 'n'){
@@ -50,117 +51,83 @@ else if(myHobby === 'yes'|| myHobby === 'y'){console.log('yes it is swimming ');
 else if(myHobby === 'yes'|| myHobby === 'y'){alert('yes it is swimming ');correctAnswer++;}
 
 
-//alert('yes '+userName+' we finished the game .');
 
-
-//alert('Ok '+ userName+' now the second round of questions');
 
 
 
 let bacYears;
-//let sincGrad;
-//let drivingYears;
-//let favCar;
+
 let favColor;
-//let timesTrav;
 
-
-bacYears = prompt('How long was my Bachelor degree?');
-for (let i = 0 ; i<4;i++){
-  if (bacYears >3){alert('it is less than what you entered, try again');
-    bacYears=prompt('How long was my Bachelor degree?');}
-  else if(bacYears <3){alert('it is more than what you entered, try again');
-    bacYears=prompt('How long was my Bachelor degree?');}
-  else if (bacYears === '3'){
-    alert('it is a correct answer');
-    correctAnswer=correctAnswer +1;
-    break;}
-
-}
-alert('the correct answer is 3');
-
-
-
-//console.log(correctAnswer);
+let condition= false;
 /*
-sincGrad = prompt('How many years have passed since my graduation?');
-for (let i = 0 ; i<4;i++){
-  if (sincGrad >3){alert('it is less than what you entered, try again');
-    sincGrad=prompt('How many years have passed since my graduation?');}
-  else if(sincGrad <3){ alert('it is more than what you entered, try again ');
-    sincGrad=prompt('How many years have passed since my graduation? ');}
-  else if (sincGrad === '3'){
-    alert('it is a correct answer');
-    correctAnswer ++;
-    break;}
-}
-//console.log(correctAnswer);
+bacYears =Number(prompt('How long was my Bachelor degree?'));
+for (let i = 0 ; i <4 ; i++){
+  if (bacYears > 3){alert('it is less than what you entered, try again');
+    bacYears=prompt('How long was my Bachelor degree?');}
+  else if(bacYears < 3){alert('it is more than what you entered, try again');
+    bacYears=prompt('How long was my Bachelor degree?');}
+  else if (bacYears === 3){
+    alert('it is a correct answer');break;}
+  alert('the correct answer is 3');//break;
+
+}correctAnswer ++;
+//alert('the correct answer is 3');
 
 
-
-
-drivingYears =prompt('How many years have I been driving?');
-for (let i = 0 ; i<4;i++){
-  if (drivingYears >4){alert('it is less than what you entered, try again ');
-    drivingYears=prompt('How many years have I been driving?');}
-  else if(drivingYears <4){alert('it is more than what you entered, try again');
-    drivingYears=prompt('How many years have I been driving? ');}
-  else if (drivingYears === '4'){
-    alert('it is a correct answer');
-    correctAnswer ++;
-    break;}
-
-}
-
-
-
-favCar= prompt('How many favorite cars do I have?');
-for (let i = 0 ; i<4;i++){
-  if (favCar >1){alert('it is less than what you entered, try again ');
-    favCar=prompt('How many favorite cars do I have? ');}
-  else if(favCar <1){alert('it is more than what you entered, try again');
-    favCar=prompt('How many favorite cars do I have? ');}
-  else if (favCar === '1'){
-    alert('it is a correct answer');
-    correctAnswer ++;
-    break;}
-
-}
-
+//alert('the correct answer is 3');
 */
+
+for (let i=0;i<4;i++){
+  bacYears=Number(prompt('How long was my Bachelor degree?'));
+  while(condition===false){
+    if(bacYears >3){alert('it is less than what you entered, try again');
+      bacYears=Number(prompt('How long was my Bachelor degree?'));
+    }
+    else if (bacYears <3){alert('it is more than what you entered, try again');
+      bacYears=Number(prompt('How long was my Bachelor degree?'));
+    }
+    else {
+      correctAnswer++;
+      condition= true;
+      alert('it is a correct answer');
+      break;
+    }
+    alert('the correct answer is 3');
+    break;
+  }
+
+}
+// if (condition ===false ){alert('the correct aswer is 3');}
+
+
+
+
+
+
 let arr=['red','black','white'];
 
 favColor =prompt('what is my favorite colors ?').toLowerCase();
-for (let i = 0 ; i<5;i++){
-  for(let y=0;y<arr.length;y++){
-    if (favColor !==arr[y] ){alert('it is not one of my favorite color !');
+for (let i = 0 ; i<=5;i++){
+  for(let y=0 ; y <arr.length ; y++){
+    if (favColor !== arr[y] ){alert('it is not one of my favorite color !');
       favColor=prompt('what is my favorite colors ?');}
-    else if(favColor === arr[y] ){ alert('it is one of my favorite color ');
-      favColor=prompt('what is my next favorite color ?');
-
+    else if(favColor === arr[y] ){
+      alert('yes it is one of my favorite color');
+      correctAnswer ++;
+      break;
     }
     break;
   }
+  //alert('yes it is one of my favorite color ');
+  //correctAnswer++;
+  break;
 }
+
+
 for (let m=0;m<arr.length;m++){
   alert('the aswers was ' + arr[m]);}
 
 alert('ok '+ userName+ ' you answered '+ correctAnswer+' question correctly');
 
-/*
 
-timesTrav =prompt('How many times have I traveled outside Jordan?');
-for (let i = 0 ; i<4;i++){
-  if (timesTrav >1){alert('it is less than what you entered, try again');
-    timesTrav=prompt('How many times have I traveled outside Jordan? ');}
-  else if(timesTrav <1){alert('it is more than what you entered, try again');
-    timesTrav=prompt(' How many times have I traveled outside Jordan?');}
-  else if (timesTrav === '1'){
-    alert('it is a correct answer');
-    correctAnswer ++;
-    break;}
-
-}
-
-alert('ok '+ userName+ ' you answered '+ correctAnswer+' question correctly');
-*/
